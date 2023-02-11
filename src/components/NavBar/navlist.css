@@ -1,0 +1,23 @@
+.nav-items {
+    flex-basis: 70%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items li {
+    list-style-type: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: .5rem;
+}
+
+.nav-items a:hover {
+    color: #060e41;
+    background-color: white;
+    border-radius: .5rem;
+}
