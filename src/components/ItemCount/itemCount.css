@@ -1,0 +1,22 @@
+.count-button {
+    display:flex;
+    justify-content: space-between;
+    width: 150px;
+    background-color: #060e41;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+
+    
+}
+
+.count-button button {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    color: white;
+    font-size: 1.5rem;
+    
+}

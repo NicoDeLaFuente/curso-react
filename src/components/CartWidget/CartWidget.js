@@ -1,12 +1,13 @@
+import { NavLink } from "react-router-dom";
 import "./cartwidget.css"
 
 const CartWidget = () => {
 
 
-    return <a href="#">
-                <i class="bi bi-cart-fill"></i>
+    return <NavLink to="/cart">
+                <i className="bi bi-cart-fill"></i>
                 <span>0</span>
-           </a>
+           </NavLink>
 }
 
 export default CartWidget;

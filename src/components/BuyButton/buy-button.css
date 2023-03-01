@@ -1,0 +1,13 @@
+.buy-button {
+    background-color: #060e41;
+    color: white;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: white;
+    color:#060e41;
+}

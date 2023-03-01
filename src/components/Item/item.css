@@ -1,0 +1,58 @@
+.carta {
+    display:flex;
+    flex-direction: column;
+    border: 2px solid #444444;
+    border-radius: 1rem;
+    height: 440px;
+}
+
+.producto-imagen {
+    width:100%;
+    height:100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.producto-abajo {
+    background-color:#444444;
+    border-radius: 0 0 .5rem .5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    margin:0;
+    padding-bottom: 10px;
+}
+
+.producto-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    padding:5px;
+    margin:0;
+}
+
+.producto-precio {
+    font-size: 17px;
+    padding:5px;
+}
+
+.producto-boton {
+    width:80%;
+    padding:8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:white;
+    color:#444444;
+    border: 2px solid #444444;
+    border-radius: 1rem;
+    cursor:pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.producto-boton:hover {
+    color:white;
+    background-color:#444444;
+    border: 2px solid white;
+}
+
