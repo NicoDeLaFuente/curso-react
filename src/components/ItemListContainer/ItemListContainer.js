@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import data from "../../products.json"
+import {getFirestore, collection, getDocs, query, where} from "firebase/firestore"
 
 import { useParams } from "react-router-dom";
 
@@ -15,30 +15,30 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
 
-        const promiseProducts = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(data);
-            }, 2000)
-        })
-        if (category) { 
-            promiseProducts.then((res) => {
-            setProducts(res.filter(product => product.categoria === category))
-            if (category === "todos-los-productos") {
-                setProducts(res)
-            }
-        })} else {
-            promiseProducts.then((res) => {
-                setProducts(res)
-            })
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+
+        if(category && category !== "todos-los-productos") {
+            const q = query(itemsCollection, where("categoryId", "==", category))
+            getDocs(q).then((snapshotQuery) => {
+                const docs = snapshotQuery.docs.map((snapshot) => ({
+                    id: snapshot.id,
+                    ...snapshot.data(),
+                }));
+
+                setProducts(docs);
         }
+    )} else {
+        getDocs(itemsCollection).then((snapshotList) => {
+            const docs = snapshotList.docs.map((snapshot) => ({
+                id: snapshot.id,
+                ...snapshot.data(),
+        }))
+        setProducts(docs)
+    })
 
-
-        promiseProducts.catch((err) => {
-            console.log("la promesa dio error", err)
-        })
-    }, [category])
-
-
+}}, [category])
+    
     return <>  {products.length === 0 ? <Loader/> : <ItemList prod={products} />}
     </>
 

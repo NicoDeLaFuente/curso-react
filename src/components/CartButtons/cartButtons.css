@@ -1,0 +1,58 @@
+.carrito-botones {
+    margin-top: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.boton-carrito-borrar {
+    border: 0;
+    background-color: lightgrey;
+    color:#444444;
+    padding: 10px;
+    font-weight:bold;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.boton-carrito-izquierda {
+    margin-left: 2rem;
+}
+
+.boton-carrito-derecha {
+    padding-right: 20px;
+    display:flex;
+    align-items: center;
+
+}
+
+.carrito-derecha-total {
+    display:flex;
+    gap: 1rem;
+    color:#444444;
+    background-color: lightgrey;
+    border-radius: 1rem 0 0 1rem;
+    padding: 0 10px;
+
+}
+
+.carrito-derecha-total p {
+    font-size: 17px;
+}
+
+.carrito-derecha-comprar {
+    background-color:#060e41;
+    color:white;
+    border-radius: 0 1rem 1rem 0;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.carrito-derecha-comprar .boton-comprar {
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+}

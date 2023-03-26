@@ -1,0 +1,74 @@
+.carrito-producto {
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr .5fr;
+    grid-template-areas:
+    "imagen titulo titulo cantidad precio subtotal borrar";
+    padding:5px;
+    background-color: lightgrey;
+    color:#444444;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.carrito-producto-imagen {
+    width: 4rem;
+    height: 4rem;
+    padding: 5px;
+    grid-area: "imagen"
+}
+
+.carrito-producto-titulo {
+    grid-area:"titulo";
+}
+
+.carrito-producto-cantidad {
+    grid-area:"cantidad";
+}
+
+.carrito-producto-precio {
+    grid-area: "cantidad";
+}
+
+.carrito-producto-subtotal {
+    grid-area:"subtotal";
+}
+
+
+
+.carrito-producto small {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.carrito-producto h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding:0;
+    margin:0;
+}
+
+.carrito-producto p {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.boton-borrar {
+    grid-area:"borrar";
+    border: 0;
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+    padding-right:10px;
+    cursor: pointer;
+}
+
+.boton-borrar:hover {
+    border: 0;
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+    padding-right:10px;
+    cursor: pointer;
+}

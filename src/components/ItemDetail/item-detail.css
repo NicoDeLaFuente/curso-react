@@ -44,3 +44,20 @@
     justify-content: center;
     gap: 4rem;
 }
+
+.go-to-cart {
+    background-color: #060e41;
+    color: white;
+    padding: .5rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: transparent;
+    text-decoration: none;
+}
+
+.go-to-cart:hover {
+    background-color: white;
+    color:#060e41;
+    border: #060e41
+}

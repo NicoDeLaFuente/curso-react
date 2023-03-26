@@ -2,7 +2,7 @@ import "./itemCount.css"
 
 import { useState } from "react";
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
 
     let [counter, setCounter] = useState(1);
 
@@ -14,10 +14,13 @@ const ItemCount = ({stock}) => {
         counter > 1 ? setCounter(counter - 1) : setCounter(counter = 1)
     }
 
-    return <div className="count-button">
-                <button onClick={clickHandlerRemove}>-</button>
-                {counter}
-                <button onClick={clickHandlerAdd}>+</button>
+    return <div className="buttons">
+                <div className="count-button">
+                    <button onClick={clickHandlerRemove}>-</button>
+                        {counter}
+                    <button onClick={clickHandlerAdd}>+</button>
+                </div>
+                <button onClick={() => onAdd(counter)} className="buy-button">Comprar</button>
             </div>
 }
 
